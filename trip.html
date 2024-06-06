@@ -8,6 +8,113 @@
 <body>
 
 <h1>Reisebuchungs-Formular</h1>
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
+  <fieldset>
+    <legend>Abflughafen</legend>
+    <label for="abflughafen">Wählen Sie Ihren Abflughafen:</label>
+    <select id="abflughafen" name="Abflughafen" required>
+      <optgroup label="Deutschland">
+        <option value="Frankfurt">Frankfurt</option>
+        <option value="München">München</option>
+        <option value="Berlin">Berlin</option>
+      </optgroup>
+      <optgroup label="Österreich">
+        <option value="Wien">Wien</option>
+        <option value="Salzburg">Salzburg</option>
+      </optgroup>
+      <optgroup label="Italien">
+        <option value="Rom">Rom</option>
+        <option value="Mailand">Mailand</option>
+      </optgroup>
+      <optgroup label="Frankreich">
+        <option value="Paris">Paris</option>
+        <option value="Lyon">Lyon</option>
+      </optgroup>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Unterkunft</legend>
+    <label>Wählen Sie die Art der Unterkunft:</label><br>
+    <input type="radio" id="hotel" name="Unterkunft" value="Hotel" required>
+    <label for="hotel">Hotel</label><br>
+    <input type="radio" id="ferienwohnung" name="Unterkunft" value="Ferienwohnung">
+    <label for="ferienwohnung">Ferienwohnung</label><br>
+    <input type="radio" id="hostel" name="Unterkunft" value="Hostel">
+    <label for="hostel">Hostel</label><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Zusätzliche Dienstleistungen</legend>
+    <label>Wählen Sie zusätzliche Dienstleistungen:</label><br>
+    <input type="checkbox" id="reiseversicherung" name="Dienstleistungen" value="Reiseversicherung">
+    <label for="reiseversicherung">Reiseversicherung</label><br>
+    <input type="checkbox" id="flughafentransfer" name="Dienstleistungen" value="Flughafentransfer">
+    <label for="flughafentransfer">Flughafentransfer</label><br>
+    <input type="checkbox" id="zusatzgepaeck" name="Dienstleistungen" value="Zusatzgepäck">
+    <label for="zusatzgepaeck">Zusatzgepäck</label><br>
+    <input type="checkbox" id="prioritycheckin" name="Dienstleistungen" value="Priority Check-In">
+    <label for="prioritycheckin">Priority Check-In</label><br>
+    <input type="checkbox" id="handgepaeck" name="Dienstleistungen" value="Zusätzliches Handgepäck">
+    <label for="handgepaeck">Zusätzliches Handgepäck</label><br>
+    <input type="checkbox" id="mietwagen" name="Dienstleistungen" value="Mietwagen">
+    <label for="mietwagen">Mietwagen</label><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Reisezeitraum</legend>
+    <label for="startdatum">Anfangsdatum:</label>
+    <input type="date" id="startdatum" name="Startdatum" required><br><br>
+    <label for="enddatum">Enddatum:</label>
+    <input type="date" id="enddatum" name="Enddatum" required><br><br>
+    <label for="reisedauer">Dauer der Reise in Tagen (1-21):</label>
+    <input type="number" id="reisedauer" name="Reisedauer" min="1" max="21" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Reisende Personen</legend>
+    <label for="personenanzahl">Anzahl der reisenden Personen:</label>
+    <input type="number" id="personenanzahl" name="Personenanzahl" min="1" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Bevorzugte Fluggesellschaft</legend>
+    <label for="fluggesellschaft">Wählen Sie Ihre bevorzugte Fluggesellschaft:</label>
+    <select id="fluggesellschaft" name="Fluggesellschaft" required>
+      <option value="Lufthansa">Lufthansa</option>
+      <option value="Swiss">Swiss</option>
+      <option value="EasyJet">EasyJet</option>
+      <option value="Ryanair">Ryanair</option>
+      <option value="Emirates">Emirates</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Reiseziel</legend>
+    <label for="reiseziel">Wählen Sie Ihr Reiseziel:</label>
+    <input list="reiseziele" id="reiseziel" name="Reiseziel" required>
+    <datalist id="reiseziele">
+      <option value="New York"></option>
+      <option value="London"></option>
+      <option value="Tokio"></option>
+      <option value="Sydney"></option>
+      <option value="Paris"></option>
+    </datalist>
+  </fieldset>
+
+  <fieldset>
+    <legend>Kontaktinformationen</legend>
+    <label for="email">E-Mail-Adresse:</label>
+    <input type="email" id="email" name="Email" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Formularsteuerung</legend>
+    <input type="reset" value="Zurücksetzen">
+    <input type="submit" value="Absenden">
+  </fieldset>
+
+</form>
 
 
 </body>
